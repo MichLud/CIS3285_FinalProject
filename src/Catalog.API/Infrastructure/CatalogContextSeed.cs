@@ -46,6 +46,7 @@ public partial class CatalogContextSeed(
                 Id = source.Id,
                 Name = source.Name,
                 Description = source.Description,
+                Gender = source.Gender,
                 Price = source.Price,
                 CatalogBrandId = brandIdsByName[source.Brand],
                 CatalogTypeId = typeIdsByName[source.Type],
@@ -79,5 +80,6 @@ public partial class CatalogContextSeed(
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
+        public string Gender { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿@using eShop.WebAppComponents.Item
+@using eShop.WebAppComponents.Catalog
 @inject IProductImageUrlProvider ProductImages
 
 <div class="catalog-item">
@@ -8,6 +9,7 @@
         </span>
         <span class='catalog-product-content'>
             <span class='name'>@Item.Name</span>
+            <span class='gender'>@Item.Gender</span>
             <span class='price'>$@Item.Price.ToString("0.00")</span>
         </span>
     </a>
