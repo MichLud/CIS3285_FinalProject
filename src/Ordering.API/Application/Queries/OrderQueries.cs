@@ -23,7 +23,7 @@ public class OrderQueries(OrderingContext context)
             Street = order.Address.Street,
             Zipcode = order.Address.ZipCode,
             Status = order.OrderStatus.ToString(),
-            Total = order.GetTotal(),
+            Total = order.GetGrandTotal(),
             OrderItems = order.OrderItems.Select(oi => new Orderitem
             {
                 ProductName = oi.ProductName,

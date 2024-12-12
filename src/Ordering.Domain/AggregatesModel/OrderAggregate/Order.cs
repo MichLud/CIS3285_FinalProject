@@ -5,6 +5,7 @@ namespace eShop.Ordering.Domain.AggregatesModel.OrderAggregate;
 public class Order
     : Entity, IAggregateRoot
 {
+    public const decimal TAX_RATE = 0.065M;
     public DateTime OrderDate { get; private set; }
 
     // Address is a Value Object pattern example persisted as EF Core 2.0 owned entity
@@ -183,4 +184,8 @@ public class Order
     }
 
     public decimal GetTotal() => _orderItems.Sum(o => o.Units * o.UnitPrice);
+
+    public decimal GetSalesTax() => GetTotal() * TAX_RATE;
+
+    public decimal GetGrandTotal() => GetTotal() + GetSalesTax();
 }

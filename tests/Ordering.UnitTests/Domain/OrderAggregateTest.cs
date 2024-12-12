@@ -175,4 +175,56 @@ public class OrderAggregateTest
         //Assert
         Assert.AreEqual(fakeOrder.DomainEvents.Count, expectedResult);
     }
+
+    [TestMethod]
+    public void GetSalesTax_Should_calculate_Correct_Tax() {
+        // Arrange
+        var salesTaxRate = Order.TAX_RATE;
+        var address = new AddressBuilder().Build();
+        var order = new OrderBuilder(address)
+            .AddOne(1, "Item1", 100.0m, 0, string.Empty) // Total Price $100
+            .Build();
+        
+        var expectedSalesTax = 100.0m * salesTaxRate;
+
+        // Act
+        var actualSalesTax = order.GetSalesTax();
+
+        // Assert
+        Assert.AreEqual(expectedSalesTax, actualSalesTax);
+    }
+
+    [TestMethod]
+    public void GetGrandTotal_Should_Include_SalesTax() {
+        // Arrange
+        var salesTaxRate = Order.TAX_RATE;
+        var address = new AddressBuilder().Build();
+        var order = new OrderBuilder(address)
+            .AddOne(1, "Item1", 100.0m, 0, string.Empty) // Total Price $100
+            .Build();
+        
+        var expectedGrandTotal = (100.0m * salesTaxRate) + 100.0m;
+
+        // Act
+        var actualGrandTotal = order.GetGrandTotal();
+
+        // Assert
+        Assert.AreEqual(expectedGrandTotal, actualGrandTotal);
+    }
+
+    [TestMethod]
+    public void GetGrandTotal_Should_Return_Zero_When_No_Items() {
+        // Arrange
+        var address = new AddressBuilder().Build();
+        var order = new OrderBuilder(address).Build();
+
+        var expectedGrandTotal = 0;
+
+        // Act
+        var actualGrandTotal = order.GetGrandTotal();
+
+        // Assert
+        Assert.AreEqual(expectedGrandTotal, actualGrandTotal);
+    }
+
 }
