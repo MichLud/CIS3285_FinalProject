@@ -907,5 +907,32 @@
     "Description": "The Trek Xtreme hiking shoes by Raptor Elite are built to endure any trail. With their durable leather upper and rugged rubber sole, they offer excellent traction and protection. These shoes come in a timeless brown color that adds a touch of style to your outdoor adventures.",
     "Gender": "Unisex",
     "Price": 135.99
+  },
+  {
+    "Id": 102,
+    "Type": "Ski/boarding",
+    "Brand": "Daybird",
+    "Name": "Explorer Cross-Country Skis",
+    "Description": "Take a liesurely glide through the snow with the Explorer Cross-Country Skis by Daybird. These skis feature a classic wooden design with a modern twist, combining traditional craftsmanship with high-performance materials. The sleek black and white color scheme adds a touch of elegance to your cross-country adventures.",
+    "Gender": "Unisex",
+    "Price": 299.00
+  },
+  {
+    "Id": 103,
+    "Type": "Trekking",
+    "Brand": "WildRunner",
+    "Name": "TrailMaster Hiking Backpack",
+    "Description": "Stay focused on your hike with the TrailMaster Hiking Backpack by WildRunner. This durable backpack, features a spacious main compartment, multiple pockets, and adjustable straps for a comfortable fit. The water-resistant fabric and reinforced seams ensure your gear stays dry and secure on the",
+    "Gender": "Unisex",
+    "Price": 99.99
+  },
+  {
+    "Id": 104,
+    "Type": "Trekking",
+    "Brand": "XE",
+    "Name": "Rugged 4-Person Tent",
+    "Description": "Gear up for your next adventure with the Rugged 2-Person Tent by XE. This rugged tent is made from durable ripstop nylon and features a waterproof coating to keep you dry in any weather. The vibrant orange color ensures high visibility in the wild.",
+    "Gender": "Unisex",
+    "Price": 349.99
   }
 ]
