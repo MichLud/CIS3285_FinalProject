@@ -67,8 +67,14 @@
                     <span class="filter-badge">@TotalQuantity</span>
                 </div>
                 <div class="cart-summary-total">
-                    <div>Total</div>
-                    <div>$@TotalPrice?.ToString("0.00")</div>
+                    <div>
+                        <strong>Sales Tax:</strong>
+                    </div>
+                    <div>@($"${(TotalPrice * 0.065m):0.00}")</div>
+                    <div>
+                        <strong>Total:</strong>
+                    </div>
+                    <div>@($"${(TotalPrice * 1.065m):0.00}")</div>
                 </div>
                 <a href="checkout" class="button button-primary">Check out</a>
                 <a href="" class="cart-summary-link">
