@@ -13,8 +13,8 @@ using eShop.Catalog.API.Infrastructure;
 namespace eShop.Catalog.API.Infrastructure.Migrations
 {
     [DbContext(typeof(CatalogContext))]
-    [Migration("20241212170453_DecemberTwelveChanges")]
-    partial class DecemberTwelveChanges
+    [Migration("20241212203807_PendingChanges")]
+    partial class PendingChanges
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

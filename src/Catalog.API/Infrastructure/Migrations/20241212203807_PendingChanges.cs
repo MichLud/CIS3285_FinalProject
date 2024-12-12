@@ -10,19 +10,13 @@ namespace eShop.Catalog.API.Infrastructure.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "Gender",
-                table: "Catalog",
-                type: "text",
-                nullable: true);
+
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "Gender",
-                table: "Catalog");
+
         }
     }
 }
